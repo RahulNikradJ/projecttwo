@@ -5,6 +5,5 @@ RUN apt-get install unzip -y
 WORKDIR /var/www/html/
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html
 RUN unzip oxer.zip
-RUN cd oxer-html
-RUN mv * ..
+RUN mv /var/www/html/oxer-html/* /var/www/html
 EXPOSE 80
