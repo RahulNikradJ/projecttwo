@@ -1,10 +1,10 @@
-FROM ubuntu
-MAINTAINER rahul.Nikrad@gmail.com
+From ubuntu:latest
+RUN apt-get update
 RUN apt-get install nginx -y
-RUN apt-get install zip -y
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/mediplus-lite.zip /var/www/html
-RUN cd /var/www/html
-RUN unzip mediplus-lite.zip
-RUN cd mediplus-lite
+RUN apt-get install unzip -y
+WORKDIR /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html
+RUN unzip oxer.zip
+WORKDIR oxer-html
 RUN mv * ..
 EXPOSE 80
