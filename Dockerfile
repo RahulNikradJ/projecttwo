@@ -6,5 +6,5 @@ WORKDIR /var/www/html/
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page296/oxer.zip /var/www/html
 RUN unzip oxer.zip
 WORKDIR oxer-html
-RUN mv * ..
+#RUN mv * ..
 EXPOSE 80
