@@ -13,3 +13,4 @@ RUN unzip mediplus-lite.zip
 RUN cp -r  mediplus-lite/* .
 RUN rm -r mediplus-lite.zip
 EXPOSE 80
+RUN service nginx start
